@@ -1,0 +1,444 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  background-size: cover;
+}
+
+/* src/styles/globals.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-right: 2rem;
+}
+
+.navLinks li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.navLinks li a:hover {
+  color: #f0a500;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .navLinks li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+/* Home container: Centering the content */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+}
+
+/* Left text container */
+.text-container {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left;
+}
+
+/* Right image container */
+.image-container {
+  flex: 1;
+  text-align: right;
+}
+
+/* Profile image */
+.profile-image {
+  width: 250px;        /* Adjust the image size */
+  height: 250px;
+  border-radius: 50%;  /* Circular image */
+  object-fit: cover;   /* Ensures image doesn't stretch */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow around image */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Profile image hover effect */
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* Text styling */
+h2 {
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 550px;
+}
+
+
+
+
+/* globals.css or styles.css */
+
+/* Global Styles for About Section */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.about-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-intro {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.about-intro p {
+  margin-bottom: 15px;
+}
+
+.about-intro strong {
+  color: #2a9d8f;
+}
+
+.profile-image {
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    margin-top: 20px;
+  }
+
+  .about-content {
+    padding-right: 0;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+
+
+
+
+
+/* globals.css or styles.css */
+
+/* Services Section */
+.services-container {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 36px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+/* globals.css or styles.css */
+
+/* Contact Section */
+.contact-container {
+  padding: 60px 20px;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 36px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+input, textarea {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #2a9d8f; /* Highlight color */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  background-color: #2a9d8f;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #21867a;
+}
+
+.submit-button:active {
+  background-color: #1b6c66;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 40px 20px;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+/* globals.css or component-specific CSS file */
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+/* globals.css or component-specific CSS file */
+
+/* Define the slide-in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the slide-in animation to the h2 element */
+.animated-heading {
+  animation: slideIn 1.5s ease-out;
+}
